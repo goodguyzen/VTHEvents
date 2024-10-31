@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('Images/Website\ PC\ BG.webp') no-repeat center center fixed; /* Set a fallback color */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    transition: background .1s ease-in-out; /* Smooth transition */
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeUp 0.8s ease-out; /* Fade-up animation */
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container p {
+    padding-top: 20px;
+    font-size: 1.3vw;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+}
+
+/* List Item Styles */
+.container li {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+    margin-top: 25px;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.container li:hover {
+    transform: scale(1.2);
+    border: 2px solid #fff;
+}
+
+.container li a {
+    line-height: 53px;
+    font-size: 30px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.container li a:hover {
+    transform: scale(1.2);
+}
+
+/* Logo */
+.logo {
+    width: 200px;
+    height: auto;
+    margin-top: 320px;
+}
+
+/* Heading */
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.buttons button {
+    background-color: #2f4d66;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 380px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    font-family: "Exo 2", sans-serif;
+}
+
+.buttons button a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: #4b7ba3;
+}
+
+.buttons span {
+    flex-grow: 1;
+    text-align: left;
+    display: inline-block;
+}
+
+.buttons button .fa-star {
+    position: relative;
+    top: 8px;
+    left: 75%;
+    transform: translateY(-50%);
+}
+
+.buttons button .fa-heart {
+    position: relative;
+    top: 8px;
+    left: 57.5%;
+    transform: translateY(-50%);
+}
+
+
+
+/* Social Icons */
+.social-icons {
+    padding: 40px;
+    display: inline-flex;
+    list-style: none;
+}
+
+/* Footer */
+.footer p {
+    font-size: 0.7em;
+    padding-bottom: 10px;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Fade-out Animation */
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .buttons button {
+        max-width: 1000px;
+        font-size: 0.9em;
+    }
+
+    .buttons button .fa-star {
+        left: 77.5%;
+    }
+
+    .buttons button .fa-heart {
+        left: 210px;
+    }
+}
+
+@media (max-width: 700px) {
+    .logo {
+        width: 160px;
+        margin-top: 35px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .buttons button {
+        max-width: 290px;
+        font-size: 0.8em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
+
+    .social-icons {
+        padding: 5px;
+    }
+
+    .footer {
+        padding-top: 35px;
+    }
+
+    .buttons button .fa-star {
+        left: 73%;
+    }
+
+    .buttons button .fa-heart {
+        left: 135px;
+    }
+
+    body {
+        background: url('Images/Website\ MB\ BG.webp') no-repeat center center fixed;
+    }   
+}
+
+.audio-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Initially hide the volume slider */
+#volume-slider {
+    display: none;
+    margin-left: 10px;
+}
+
+/* Show the volume slider when the audio-controls are hovered */
+.audio-controls:hover #volume-slider {
+    display: block; /* Change from opacity to display */
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+@media (max-width: 600px) {
+    #volume-slider {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .audio-controls {
+        top: 5px;
+        right: 5px;
+    }
+
+}
+
+/* Snowfall Animation */
+.snow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.snowfall {
+    margin-top: -20px;
+    position: absolute;
+    height: 180%;
+    width: 100%;
+    background: url("https://user-images.githubusercontent.com/7342669/50293046-ab4ed880-0440-11e9-8537-8a0e70729b34.png"),
+                url("https://user-images.githubusercontent.com/7342669/50293049-ad189c00-0440-11e9-8cae-a57ad65c22ca.png"),
+                url("https://user-images.githubusercontent.com/7342669/50294834-c58ab580-0444-11e9-84b6-186b19edf94d.png");
+    animation: letItSnow 20s linear infinite;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+@media (max-width: 700px) {
+    .snowfall {
+        height: 100%; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .snowfall {
+        height: 110%; /* Further adjust height for even smaller screens */
+    }
+}
+
+@keyframes letItSnow {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 500px 1000px, 400px 400px, 300px; }
+}

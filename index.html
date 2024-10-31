@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTH Debate Tournaments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Snowfall Animation -->
+    <div class="snow"></div>
+    <div class="snowfall"></div>
+
+    <!-- Background Music -->
+    <audio id="background-music" loop muted autoplay hidden>
+        <source src="Christmas Background Music For Videos Royalty Free - Tis the Season.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="audio-controls">
+        <button id="mute-button"><i class="fa-solid fa-volume-xmark"></i></button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <img src="Images/LOGO DP.webp" alt="VTH Logo" class="logo" loading="lazy">
+        <h1>VTH Debate Tournaments</h1>
+        <div class="buttons">
+            <button>Debate Open 2024<i class="fa-solid fa-heart"></i></button>
+            <button onclick="fadeOutAndNavigate('vhtwsc.html')">WSC 2024<i class="fa-solid fa-star"></i></button>
+        </div>
+        <p>Build your words. Build your world.</p>
+        <ul class="social-icons">
+            <li><a href="#" aria-label="Facebook"><span class="fa-brands fa-facebook"></span></a></li>
+            <li><a href="#" aria-label="Email"><span class="fa-regular fa-envelope"></span></a></li>
+        </ul>
+        <footer class="footer">
+            <p>&copy; 2024 All Rights Reserved. By TheDevs</p>
+        </footer>
+    </div>
+
+    <script src="Transition.js" defer></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
+        const volumeSlider = document.getElementById('volume-slider');
+
+        // Set initial volume
+        audio.volume = volumeSlider.value;
+
+        // Mute/Unmute functionality
+        muteButton.addEventListener('click', function() {
+            audio.muted = !audio.muted;
+            muteButton.innerHTML = audio.muted ? '<i class="fa-solid fa-volume-mute"></i>' : '<i class="fa-solid fa-volume-up"></i>';
+        });
+
+        // Volume control functionality
+        volumeSlider.addEventListener('input', function() {
+            audio.volume = volumeSlider.value;
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const audioControls = document.querySelector('.audio-controls');
+        const volumeSlider = document.getElementById('volume-slider');
+
+        // Toggle visibility on click/tap
+        audioControls.addEventListener('click', function() {
+            if (volumeSlider.style.display === 'block') {
+                volumeSlider.style.display = 'none';
+            } else {
+                volumeSlider.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
