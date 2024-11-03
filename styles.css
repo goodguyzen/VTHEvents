@@ -130,14 +130,12 @@ h1 {
     display: inline-block;
 }
 
-.buttons button .fa-heart {
+.buttons button .fa-star {
     position: relative;
     top: 8px;
-    left: 57.5%;
+    left: 75%;
     transform: translateY(-50%);
 }
-
-
 
 /* Social Icons */
 .social-icons {
@@ -226,8 +224,8 @@ h1 {
         font-size: 0.9em;
     }
 
-    .buttons button .fa-heart {
-        left: 210px;
+    .buttons button .fa-star {
+        left: 77.5%;
     }
 }
 
@@ -262,8 +260,8 @@ h1 {
         padding-top: 35px;
     }
 
-    .buttons button .fa-heart {
-        left: 135px;
+    .buttons button .fa-star {
+        left: 73%;
     }
 
     body {
