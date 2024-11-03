@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,6 +9,18 @@ body {
     color: white;
     text-align: center;
 }
+
+/* Title Image */
+
+.promo {
+    width: 370px;
+    height: auto;
+    margin-top: 300px;
+    padding: 20px;
+    clip-path: inset(0 0 60px 0); 
+}
+
+/* content */
 
 .container {
     display: flex;
@@ -19,25 +33,7 @@ body {
     animation: fadeIn 1s forwards;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.promo {
-    width: 370px;
-    height: auto;
-    margin-top: 300px;
-    padding: 20px;
-    clip-path: inset(0 0 60px 0); 
-}
-
-.container .rules p{
+.container .rules p {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -48,6 +44,34 @@ body {
     text-align: left;
     text-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
+
+.container li {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+    margin-top: 25px;
+
+}
+
+.container li a {
+    line-height: 53px;
+    font-size: 30px;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* buttons */
 
 .buttons button {
     background-color: #2f4d66;
@@ -109,33 +133,23 @@ body {
     background-color: #4b7ba3;
 }
 
+/* social */
+
 .social-icons {
     padding: 40px;
     display: inline-flex;
     list-style: none;
 }
 
-.container li {
-    height: 50px;
-    width: 50px;
-    border: 1px solid #fff;
-    margin: 0 15px;
-    border-radius: 50%;
-    margin-top: 25px;
+/* footer */
 
-}
-
-.container li a {
-    line-height: 53px;
-    font-size: 30px;
-    color: #fff;
-}
-
-.footer p {
+.footer p{
     font-size: 0.7em;
     padding-bottom: 10px;
     font-family: "Rubik", sans-serif;
 }
+
+/* responsiveness */
 
 @media (max-width: 800px) {
     h1 {
@@ -148,6 +162,7 @@ body {
     }
     
 }
+
 
 @media (max-width: 700px) {
 
