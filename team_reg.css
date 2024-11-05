@@ -137,6 +137,6 @@ body {
 
 @media (max-width: 500px) {
     .snowfall {
-        height: 110%; /* Further adjust height for even smaller screens */
+        height: 170%; /* Further adjust height for even smaller screens */
     }
 }
